@@ -1,0 +1,33 @@
+CREATE DATABASE stock_bi;
+USE stock_bi;
+CREATE TABLE DimCompany (
+    CompanyKey INT PRIMARY KEY,
+    Ticker VARCHAR(10),
+    CompanyName VARCHAR(255),
+    Sector VARCHAR(100),
+    Industry VARCHAR(100),
+    Country VARCHAR(100),
+    IPO_Year INT
+);
+CREATE TABLE DimDate (
+    DateKey INT PRIMARY KEY,
+    Year INT,
+    Month INT,
+    MonthName VARCHAR(20),
+    Quarter INT,
+    YearMonthLabel VARCHAR(10),
+    Interest_Rate FLOAT,
+    Inflation_Rate FLOAT,
+    GDP_Growth FLOAT
+);
+CREATE TABLE FactStockMonthly (
+    Ticker VARCHAR(10),
+    DateKey INT,
+    Month_End_Close FLOAT,
+    Monthly_High FLOAT,
+    Monthly_Low FLOAT,
+    Total_Volume BIGINT,
+    Monthly_Return FLOAT,
+    FOREIGN KEY (Ticker) REFERENCES DimCompany(Ticker),
+    FOREIGN KEY (DateKey) REFERENCES DimDate(DateKey)
+);
