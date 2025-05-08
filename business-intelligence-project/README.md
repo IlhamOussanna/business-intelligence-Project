@@ -22,4 +22,4 @@ This project is a complete end-to-end BI solution designed for analyzing U.S. st
 - Power BI (interactive dashboards)
 
 ## Author
-Ilham Oussanna (Group 6)
+Ilham Oussanna
