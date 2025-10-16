@@ -1,4 +1,4 @@
-# Business Intelligence Report – Group 6
+# Business Intelligence Report 
 
 This project is a complete end-to-end BI solution designed for analyzing U.S. stock market performance and its relationship with macroeconomic indicators. Developed as part of a business intelligence module, the project uses Python, SQL, MySQL, and Power BI to demonstrate data integration, modeling, and visualization.
 
